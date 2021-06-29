@@ -22,3 +22,10 @@ In this initial phase, we're going to have to start by converting a legacy appli
 ## dependencies : 
                 npm i react-bootstrap 
                 npm i bootsstrap 
+
+
+## Phase 3 Requirements
+* As a user, I would like to see my To Do List Items a few at a time so that I don’t have to wade through them all
+* As a user, I would like my default view to only be “Incomplete” Items so that I can quickly determine what I have to do.
+* As a user, I would like my list sorted by difficulty so that I can more easily prioritize
+* As a user, I would like the option to change my default preferences with regards to how many Items I see per page, which items are filtered, and how they are sorted
