@@ -1,5 +1,5 @@
 import React from 'react';
-import ToDo from './todo'
+// import ToDo from './todo'
 const TodoList= (props)=> {
 
   
