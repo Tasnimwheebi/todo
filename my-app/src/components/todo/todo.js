@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import TodoForm from './form.js';
 import TodoList from './list.js';
-
+import Pagination from '../contex/pagination.js';
 
 import './todo.scss';
 
@@ -51,7 +51,7 @@ const ToDo = (props)=>{
       document.title = `Completed items ${list.filter(item => item.complete).length}` 
 }, [list]);
     return (
-      <>
+      <Pagination list={list}>
         <header>
           <h2>
           There are {list.filter(item => !item.complete).length} Items To Complete
@@ -71,7 +71,7 @@ const ToDo = (props)=>{
             />
           </div>
         </section>
-      </>
+      </Pagination>
     );
   
 }

@@ -1,11 +1,16 @@
-import React from 'react';
-import ToDo from './todo'
+import React ,{useContext} from 'react';
+// import ToDo from './todo'
+import Pagination from './pagination';
+import { PaginationContext } from '../contex/pagination';
+
 const TodoList= (props)=> {
+  const pagination = useContext(PaginationContext);
 
   
-    return (
+    return ( 
+    <>
       <ul>
-        {props.list.map(item => (
+        {pagination.item.map(item => (
           <li
             className={`complete-${item.complete.toString()}`}
             key={item._id}
@@ -16,6 +21,10 @@ const TodoList= (props)=> {
           </li>
         ))}
       </ul>
+     <Pagination item= {props.list.length}/>
+
+      </>
+      
     );
   
 }
